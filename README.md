@@ -92,3 +92,40 @@ If the article takes 30 minutes or longer to read:
 
 There aren't tests for this feature, so you'll have to rely on running the code
 in the browser to see if your implementation works!
+
+---
+
+## My Notes: Underreacted Blog
+
+A static personal blog built with React and Vite. It practices components, JSX, and passing data down as props.
+
+### How to run
+
+1. `npm install`
+2. `npm run dev`
+3. Open http://localhost:5173
+
+### Component tree
+
+App
+├── Header
+├── About
+└── ArticleList
+    └── Article (one per post)
+
+### Props
+
+| Component   | Props                                   |
+|-------------|-----------------------------------------|
+| Header      | name                                    |
+| About       | image (has a default), about            |
+| ArticleList | posts                                   |
+| Article     | title, date (has a default), preview, minutes |
+
+### Data
+
+All blog content lives in `src/data/blog.js`. Edit that file to change the blog name, about text, or posts. No component changes are needed.
+
+### Bonus
+
+Each article shows a minutes-to-read label: ☕️ per 5 minutes (under 30 minutes) or 🍱 per 10 minutes (30 minutes or more), rounded up.
